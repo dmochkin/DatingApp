@@ -52,7 +52,6 @@ namespace DatingApp.API.Controllers
         {
             string username = userForLoginDto.Username.ToLower();
             string password = userForLoginDto.Password;
-
             var userFromRepo = await _repo.Login(username, password);
 
             if (userFromRepo == null)
